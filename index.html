@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asesoría de Créditos - BANTRAB</title>
+    <style>
+        /* Estilos generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            overflow: hidden;
+            font-size: 1.1rem;
+        }
+
+        /* Contenedor principal */
+        .container {
+            max-width: 600px;
+            padding: 40px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            box-shadow: 0px 4px 15px rgba(0, 174, 239, 0.4);
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .container:hover {
+            transform: scale(1.02);
+        }
+
+        /* Título principal */
+        h1 {
+            color: #00AEEF;
+            font-size: 2rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            animation: fadeInDown 1s ease forwards;
+        }
+
+        /* Lista de beneficios */
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 30px;
+            line-height: 1.8;
+            opacity: 0;
+            animation: fadeInUp 1.2s ease forwards;
+        }
+
+        ul li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        ul li::before {
+            content: "•";
+            color: #00AEEF;
+            position: absolute;
+            left: 0;
+            font-size: 1.2rem;
+            top: 0;
+        }
+
+        /* Texto adicional */
+        .info-text {
+            font-size: 1rem;
+            color: #ccc;
+            margin-bottom: 30px;
+            opacity: 0;
+            animation: fadeInUp 1.4s ease forwards;
+        }
+
+        /* Estilo del botón de WhatsApp */
+        .btn-whatsapp {
+            background-color: #00AEEF;
+            color: #fff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            opacity: 0;
+            animation: fadeInUp 1.6s ease forwards;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #008FBF;
+            transform: scale(1.05);
+        }
+
+        /* Animaciones */
+        @keyframes fadeInDown {
+            from {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Animación de fondo */
+        .background-animation {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+            background: linear-gradient(135deg, #111, #333);
+            opacity: 0.8;
+        }
+
+        .background-animation::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0, 174, 239, 0.2), transparent 50%);
+            animation: rotateBackground 6s linear infinite;
+        }
+
+        @keyframes rotateBackground {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Contenedor de animación de fondo -->
+    <div class="background-animation"></div>
+
+    <!-- Contenido de la página -->
+    <div class="container">
+        <h1>Asesoría de Créditos BANTRAB</h1>
+        <ul>
+            <li>Créditos fiduciarios sin fiador</li>
+            <li>Consolidación de deudas</li>
+            <li>Liquidez en su salario</li>
+            <li>Plazo de 10 años</li>
+            <li>No se heredan deudas</li>
+            <li>Consultas Médicas</li>
+        </ul>
+        <p class="info-text">Si ya eres cliente y tu crédito está en descuento judicial, tienes opción a limpiar tu
+            récord crediticio.</p>
+        <a href="https://wa.me/50238121553?text=Hola,%20me%20gustaría%20precalificar%20para%20un%20crédito%20con%20BANTRAB"
+            class="btn-whatsapp">
+            Precalifícate Ya
+        </a>
+    </div>
+
+</body>
+
+</html>
